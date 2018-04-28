@@ -1,0 +1,35 @@
+
+<mat-card class="example-card" title="Menú Inicial">
+        <mat-toolbar color="primary">
+            <mat-toolbar-row>
+              <span>Menú Inicial</span>
+            </mat-toolbar-row>
+         </mat-toolbar>
+      
+      <mat-card-header>
+        <br/>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+          Por favor seleccione la opción de la transacción que desea realizar
+        </p>
+    
+        <br/>
+
+        <button mat-raised-button color="primary" (click)="irConsignar()" >Consignar</button>
+        <button mat-raised-button color="warn" (click)="irRetirar()" > Retirar</button>
+ 
+        <button mat-button (click)="irInicio(); ">
+           <mat-icon>input</mat-icon>
+        </button>
+        
+    
+      </mat-card-content>
+      <mat-card-actions>
+       
+      </mat-card-actions>
+    </mat-card>
+
+    <mat-card class="example-card-footer">Desarrollado por: César López ® - Banco Web</mat-card>
+
+

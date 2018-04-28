@@ -1,0 +1,61 @@
+<mat-card class="example-card" title="Consignación">
+    <mat-toolbar color="primary">
+        <mat-toolbar-row>
+          <span>Consignación</span>
+        </mat-toolbar-row>
+     </mat-toolbar>
+  
+  <mat-card-header>
+    <br/>
+  </mat-card-header>
+  <mat-card-content>
+    <p>
+      Para realizar una consignación, por favor ingrese el valor de la consignación
+      y el número de cuenta a la que llegará el dinero.
+    </p>
+
+    <br/>
+
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Identificación Titular" name="identificacion" [(ngModel)]="identificacion" required>
+      <button mat-button *ngIf="identificacion" matSuffix mat-icon-button aria-label="Limpiar" (click)="identificacion=''">
+          <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Número cuenta" [(ngModel)]="numeroCuenta" name="numeroCuenta" required/>
+        <button mat-button *ngIf="numeroCuenta" matSuffix mat-icon-button aria-label="Limpiar" (click)="numeroCuenta=''">
+            <mat-icon>close</mat-icon>
+          </button>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="Valor consignación" type="number" class="example-right-align" [(ngModel)]="valor" name="valor" required/>
+        <button mat-button *ngIf="valor" matSuffix mat-icon-button aria-label="Limpiar" (click)="valor=''">
+            <mat-icon>close</mat-icon>
+          </button>
+        <span matPrefix>$&nbsp;</span>
+      </mat-form-field>
+
+
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button color="primary" (click)="consignar(); ">CONSIGNAR</button>
+    <button mat-button (click)="valor=''; numeroCuenta=''">LIMPIAR</button>
+
+    <button mat-button (click)="irMenu(); ">
+      
+        <mat-icon>home</mat-icon>
+
+    </button>
+
+    <button mat-button (click)="irInicio(); ">
+      
+        <mat-icon>input</mat-icon>
+
+    </button>
+  </mat-card-actions>
+</mat-card>
+
+<mat-card class="example-card-footer">Desarrollado por: César López ® - Banco Web</mat-card>

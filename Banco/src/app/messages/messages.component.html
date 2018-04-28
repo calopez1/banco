@@ -1,0 +1,16 @@
+
+  <div *ngIf="messageService.messages.length">
+   <mat-card class="example-card" title="Consignación">
+     <mat-toolbar color="basic">
+        <mat-toolbar-row>
+          <div *ngFor='let message of messageService.messages'> {{message}} </div>
+        </mat-toolbar-row>
+      </mat-toolbar>
+   
+   </mat-card>
+   </div>
+      
+
+
+
+

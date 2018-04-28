@@ -1,0 +1,46 @@
+
+<div flex="50" layout="row" layout-align="center">
+
+<mat-card class="example-card">
+    <mat-toolbar color="primary">
+        <mat-toolbar-row>
+            
+          <span>  Bienvenido</span>
+          
+
+        </mat-toolbar-row>
+     </mat-toolbar>
+     
+  <mat-card-header>
+    
+    <br/>
+    
+  </mat-card-header>
+  <mat-card-content>
+    
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Usuario" name="usuario" [(ngModel)]="usuario" required>
+        <button mat-button *ngIf="usuario" matSuffix mat-icon-button aria-label="Limpiar" (click)="usuario=''">
+            <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+    
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Contraseña" type="password" name="password" [(ngModel)]="password" required>
+        <button mat-button *ngIf="password" matSuffix mat-icon-button aria-label="Limpiar" (click)="password=''">
+            <mat-icon>close</mat-icon>
+          </button> 
+      </mat-form-field>
+
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button color="primary" (click)="ingresar()" type="button" autofocus>LOGIN</button>
+    <button mat-button (click)="usuario=''; password=''">LIMPIAR</button>
+  </mat-card-actions>
+</mat-card>
+
+
+<mat-card class="example-card-footer">Desarrollado por: César López ® - Banco Web</mat-card>
+
+
+</div>
